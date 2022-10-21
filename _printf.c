@@ -75,6 +75,11 @@ int _printf(const char *format, ...)
 		else if (current == '%' && next == '%')
 
 			len += _putchar('%'), i++;
+		else if (current == '%'  || next == 'b')
+		{
+			bin = va_arg(args, int);
+			len += _binary(bin), i++;
+		}
 
 		else if (current == '%' && (next == 'd' || next == 'i'))
 

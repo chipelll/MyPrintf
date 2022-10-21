@@ -14,4 +14,6 @@ int _putint(int n);
 
 int intlen(int num);
 
+int _binary(int n);
+
 #endif
